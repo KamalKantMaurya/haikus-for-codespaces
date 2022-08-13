@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<math.h>
+int multi(int num1,int num2);
+float div(int num1,int num2);
+int add(int num1,int num2);
+int subtract(int num1,int num2);
+int main()
+{
+  int num1,num2,key,answer;
+  printf("Enter First Number:\t");
+  scanf("%d",&num1);
+  printf("Enter second number:\t");
+  scanf("%d",&num2);
+  printf("Choose any of the operation to perform:\n");
+  printf("Enter 1 for multiplication:\n");
+  printf("Enter 2 for division:\n");
+  printf("Enter 3 for addition:\n");
+  printf("Enter 4 for subtraction:\n");
+  scanf("%d",&key);
+  if(key==1)
+  {
+  	answer=multi(num1,num2);
+  	printf("The answer is:\t%d",answer);
+  }
+  else if(key==2)
+  {
+  	float(answer)=div(num1,num2);
+  	printf("The answer is:\t%f",answer);
+  }
+  else if(key==3)
+  {
+  	answer=add(num1,num2);
+  	printf("The answer is:\t%d",answer);
+  }
+  else if(key==4)
+  {
+  	answer=subtract(num1,num2);
+  	printf("The answer is:\t%d",answer);
+  }
+  else
+  {
+  	printf("Invalid choice");
+  	return 0;
+  }
+  return 0;
+}
+int subtract(int num1,int num2)
+{
+	int temp;
+	temp=num1-num2;
+	return temp;
+}
+int add(int num1,int num2)
+{
+	int temp;
+	temp=num1+num2;
+	return temp;
+}
+float div(int num1,int num2)
+{
+	float temp;
+	temp=float(num1)/float(num2);
+	return temp;
+}
+int multi(int num1,int num2)
+{
+	int temp;
+	temp=num1*num2;
+	return temp;
+}
